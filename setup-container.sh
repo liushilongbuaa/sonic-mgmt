@@ -58,7 +58,7 @@ EOF
 }
 
 DOCKER_SONIC_MGMT="docker-sonic-mgmt"
-DOCKER_REGISTRY="sonicdev-microsoft.azurecr.io:443"
+DOCKER_REGISTRY="soniccr2.azurecr.io"
 LOCAL_IMAGE_NAME=docker-sonic-mgmt-`echo "$USER" | tr '[:upper:]' '[:lower:]'`
 
 function show_help_and_exit() {
@@ -72,8 +72,8 @@ function show_help_and_exit() {
     echo "-i <image ID>         : specify Docker image to use. This can be an image ID (hashed value) or an image name."
     echo "                      | If no value is provided, defaults to the following images in the specified order:"
     echo "                      |   1. The local image named \"docker-sonic-mgmt\""
-    echo "                      |   2. The local image named \"sonicdev-microsoft.azurecr.io:443/docker-sonic-mgmt\""
-    echo "                      |   3. The remote image at \"sonicdev-microsoft.azurecr.io:443/docker-sonic-mgmt\""
+    echo "                      |   2. The local image named \"soniccr2.azurecr.io/docker-sonic-mgmt\""
+    echo "                      |   3. The remote image at \"soniccr2.azurecr.io/docker-sonic-mgmt\""
     echo ""
     echo "-d <directory>        : specify directory inside container to bind mount to sonic-mgmt root (default \"/var/src/\")"
     exit $1
